@@ -37,7 +37,7 @@ for line in lines:
 			file_created = datetime.datetime.fromtimestamp(os.path.getctime(file_path))
 			if not file_created > download['Created']:
 				cnd.download_file(elementID,download['Id'],file_path)
-			else:
-				print("Latest version already downloaded. "+download['Path']+"/"+download['Name'])
+			# else:
+				# print("Latest version already downloaded. "+download['Path']+"/"+download['Name'])
 		else:
 			cnd.download_file(elementID,download['Id'],file_path)
