@@ -1,3 +1,5 @@
+##### Updated for Python3 by Asger Juul Brunshøj (s103412)
+
 CampusNetDrop CommandLine
 =========================
 This is a tiny application to synchronize the shared files of your courses, projects and groups from DTU CampusNet to your personal computer. After configuration of your login and your courses, the application will be able to download the shared files of these courses with the same structure as online. Every time you re-run the downloader it will check for new versions of already downloaded files and of course download new files.
@@ -27,7 +29,7 @@ Tip 2: Add a `alias` in your `~/.bashrc` or `~/.bash_profile` for faster access
 CampusNet username? (sXXXXXX)
 sxxxxxx
 CampusNet password?
-Password: 
+Password:
 Configure courses? (yes/no)
 yes
 Add "Courses --- 01426 Cryptology 2" to Downloads? (y/n)
@@ -49,7 +51,7 @@ n
 CampusNet username? (sXXXXXX)
 sxxxxxx
 CampusNet password?
-Password: 
+Password:
 Configure courses? (yes/no)
 yes
 Add "Courses --- 01426 Cryptology 2" to Downloads? (y/n)
