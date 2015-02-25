@@ -16,9 +16,9 @@ for line in lines:
 	line = line.split(";")
 	elementID = line[1]
 	directory = line[2]
-	print(" ################### ")
-	print("  "+line[0])
-	print(" ################### ")
+	print("### ",end='')
+	print(line[0],end='')
+	print(" ### ")
 
 	# get files of course from xml
 	url='https://www.campusnet.dtu.dk/data/CurrentUser/Elements/%s/Files' % (str(elementID))
