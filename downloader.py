@@ -16,7 +16,7 @@ for line in lines:
 	line = line.split(";")
 	elementID = line[1]
 	directory = line[2]
-	print("### ",end='')
+	print("\n### ",end='')
 	print(line[0],end='')
 	print(" ### ")
 
