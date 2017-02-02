@@ -54,12 +54,12 @@ def getLatestVersion(root):
 
 def download_file(elementID,downloadID,file_path):
 	"""Simply download a file"""
+	if os.path.isdir(file_path):
+		return
 	print("Downloading file "+file_path)
 	url='https://www.campusnet.dtu.dk/data/CurrentUser/Elements/%s/Files/%s/Bytes' % (str(elementID),str(downloadID))
 	response = sendRequest(url)
 	data = response.content
-	if os.path.isdir(file_path):
-		return
 	with open(file_path, 'wb') as f:
 		f.write(data)
 
