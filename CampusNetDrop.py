@@ -1,5 +1,6 @@
 import os, datetime, getpass, requests
 import xml.etree.ElementTree as ET
+import json
 
 def sendRequest(url):
 	dirname, filename = os.path.split(os.path.abspath(__file__))
@@ -60,6 +61,13 @@ def download_file(elementID,downloadID,file_path):
 	url='https://www.campusnet.dtu.dk/data/CurrentUser/Elements/%s/Files/%s/Bytes' % (str(elementID),str(downloadID))
 	response = sendRequest(url)
 	data = response.content
+	
+	if 'application/json' in str(response.headers['Content-Type']):
+		json_data = json.loads(data)
+		if 'Message' in json_data and "error" in str(json_data['Message']):
+			print("File " + file_path + " turned out to be unavailable. Skipped.")
+			return
+
 	with open(file_path, 'wb') as f:
 		f.write(data)
 
