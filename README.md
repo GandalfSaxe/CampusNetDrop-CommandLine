@@ -6,6 +6,10 @@ This is a tiny application to synchronize the shared files of your courses, proj
 
 Download or clone the application files into a directory.
 
+Install `requests` package if you don't have it available:
+
+```pip3 install requests```
+
 Run the configuration:
 
 ```python /pathToDirectory/configuration.py```
