@@ -13,7 +13,8 @@ def sendRequest(url):
 	PApassword = lines[0].strip()
 	username = lines[1].strip()
 	headers = {'X-appname' : appName, 'X-token' : appToken}
-	return requests.get(url,auth=(username,PApassword),headers=headers)
+	r = requests.get(url,auth=requests.auth.HTTPBasicAuth(username,PApassword),headers=headers)
+	return r
 
 def createFolders(root,path):
 	"""Run through XML nodes and copy folder structure into 'path' """
