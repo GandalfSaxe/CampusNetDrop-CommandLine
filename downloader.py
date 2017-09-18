@@ -21,7 +21,7 @@ for line in lines:
 	print(" ### ")
 
 	# get files of course from xml
-	url='https://www.campusnet.dtu.dk/data/CurrentUser/Elements/%s/Files' % (str(elementID))
+	url='https://cn.inside.dtu.dk/data/CurrentUser/Elements/%s/Files' % (str(elementID))
 	response = cnd.sendRequest(url)
 	root = ET.fromstring(response.text)
 
