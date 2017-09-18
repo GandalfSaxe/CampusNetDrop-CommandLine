@@ -59,7 +59,7 @@ def download_file(elementID,downloadID,file_path):
 	if os.path.isdir(file_path):
 		return
 	print("Downloading file "+file_path)
-	url='https://www.campusnet.dtu.dk/data/CurrentUser/Elements/%s/Files/%s/Bytes' % (str(elementID),str(downloadID))
+	url='https://cn.inside.dtu.dk/data/CurrentUser/Elements/%s/Files/%s/Bytes' % (str(elementID),str(downloadID))
 	response = sendRequest(url)
 	data = response.content
 	

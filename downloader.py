@@ -24,9 +24,9 @@ for line in lines:
 	url='https://cn.inside.dtu.dk/data/CurrentUser/Elements/%s/Files' % (str(elementID))
 	response = cnd.sendRequest(url)
 	root = ET.fromstring(response.text)
-
+	
 	# create folder structure
-	cnd.createFolders(root,directory)
+	cnd.createFolders(root, directory)
 	to_download = []
 	# get files to download
 	cnd.getFiles(root,"",to_download)
