@@ -18,7 +18,7 @@ print("Configure courses? (yes/no)")
 configure = input()
 if configure == "yes" or configure == "y":
 	# Create request and load XML into 'root'
-	url = 'https://www.campusnet.dtu.dk/data/CurrentUser/Elements'
+	url = 'https://cn.inside.dtu.dk/data/CurrentUser/Elements'
 	response = cnd.sendRequest(url)
 	root = ET.fromstring(response.text)
 	# Run through 'root' node and save elementID, download path and versioning in config
