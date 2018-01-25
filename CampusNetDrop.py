@@ -20,11 +20,7 @@ def createFolders(root,path):
 	"""Run through XML nodes and copy folder structure into 'path' """
 	for node in root:
 		if node.tag == "Folder":
-			if node.get('Name') == "Student folder":
-				if len(node) == 0:
-					continue	
-				else:
-					createFolder(node.get('Name'),path)
+			createFolder(node.get('Name'),path)
 			if len(node):
 				createFolders(node,path+"/"+node.get('Name'))
 
